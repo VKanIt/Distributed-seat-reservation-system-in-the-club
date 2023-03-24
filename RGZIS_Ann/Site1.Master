@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RGZIS_Ann.Site1" %>
+
+<!DOCTYPE html>
+<style>
+    *{
+    padding: 0%;
+    margin: 0%;
+}
+#grid1 { 
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
+  }
+#grid1 > div {
+  text-align: center;
+  height: 100px;
+}
+.column {
+    width: 25%;
+    min-height: 40px;
+    float:left;
+    border-color:white;
+    border-style:solid;
+    border-width: 2px;
+    background-color:#000000;
+    text-align:center;
+}
+.column a{
+    display: block; 
+    text-decoration: none;
+    margin-top:2%;
+}
+.text{
+    display: block; 
+    text-decoration: none;
+    font-size: 110%; 
+    font-family: Arial;
+    color:white;
+}
+</style>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background: url(bricks.jpg) 100% 100% no-repeat; background-size:cover; height:100%;">
+        <div style="border-bottom: 3px solid #000000; position:relative; background-color:#000000;">
+            <center><a runat="server" href="~/Default.aspx"><img style="height: 280px; width: 440px" src="club.jpg"/></a></center>
+        </div>
+            <div style="position:absolute;left:19%; top: 285px; width: 1204px; margin-top:1%;">
+                <div class="column"><a runat="server" href="~/WebForm1.aspx"><text class="text">Мероприятия</text></a>
+                    </div>
+                    <div class="column"><a runat="server" href="~/WebForm3.aspx"><text class="text">Бронирование</text></a>
+                    </div>
+                    <div class="column"><a runat="server" href="~/WebForm5.aspx"><text class="text">Личный кабинет</text></a>
+                    </div>
+            </div>
+            <br/><br/>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="background:#000000;">
+            <div id="grid1">
+                    <div>
+                        <img style="position:relative; top:18px; height: 36px; width: 22px;" src="loc.png"/>
+                        <text style="color:#ffffff; margin-left:20px; position:relative; top:5px; font-size: 110%; font-family: 'Arial';">Москва, ул. Ленинградская, 18</text>
+                                           
+                    </div>
+                    <div>
+                        <img style="position:relative; top:15px; height: 33px; width: 37px" src="t2.png"/>
+                        <text style="color:#ffffff; margin-left:10px; position:relative; top:5px; font-size: 110%; font-family: 'Arial';">+7 (913) 423-23-23</text>
+                    </div>
+                    <div>
+                        <img style="position:relative; top:15px; height: 33px; width: 37px" src="mail.png"/>
+                        <text style="color:#ffffff; margin-left:10px; position:relative; top:5px; font-size: 110%; font-family: 'Arial';">info@magenta.ru</text>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
